@@ -1,0 +1,39 @@
+{
+  "name": "node-MVC",
+  "version": "1.0.0",
+  "description": "node MVC",
+  "main": "index.js",
+  "author": "geek <1596399901@qq.com>",
+  "license": "GPL",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development supervisor --harmony index.js",
+    "local": "cross-env NODE_ENV=local supervisor  --harmony index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production pm2 start index.js --node-args='--harmony' --name 'node-elm'",
+    "stop": "cross-env NODE_ENV=production pm2 stop index.js --name 'node-elm'",
+    "restart": "cross-env NODE_ENV=production pm2 restart index.js --node-args='--harmony' --name 'node-elm'",
+    "masterStart": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WangBiaoxuan/node-MVC"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-3": "^6.22.0",
+    "babel-register": "^6.24.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.1",
+    "mongoose": "^5.0.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-export-extensions": "^6.22.0"
+  }
+}
