@@ -19,7 +19,7 @@ app.all('*', (req, res, next) => {
 	}
 });
 app.use(cookieParser());
-app.use(express.static('./public'))
+app.use(express.static(__dirname + '/public'))
 
 router(app)
 
