@@ -14,6 +14,9 @@ const foodSchema = new Schema({
     favs: Number,
   }
 })
+foodSchema.methods.getWeight = function(cb) {
+  return this.model('Food').find({ type: this.type }, cb);
+}
 
 foodSchema.index({item_id: 1});
 

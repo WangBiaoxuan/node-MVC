@@ -2,6 +2,7 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import config from './config';
 import router from './router'
+import db from './mongodb/db.js';
 
 const app = express()
 

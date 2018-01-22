@@ -1,5 +1,5 @@
 module.exports = {
-    "extends": "eslint:recommended",
+    "extends": "standard",
     "env": {
       "browser": true,
       "node": true,

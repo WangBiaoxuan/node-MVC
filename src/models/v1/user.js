@@ -3,9 +3,9 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
-	user_id: Number,
 	username: String,
-	password: String,
+  password: String,
+  createTime: { type: Date, default: Date.now },
 })
 
 userSchema.index({ user_id: 1 });
@@ -35,7 +35,7 @@ const User = mongoose.model('User', userSchema);
 
 User.findOne((err, data) => {
 	if (!data) {
-		User.create({ user: 'admin', password: 'admin'});
+		User.create({ username: 'admin', password: 'admin'});
 	}
 })
 
