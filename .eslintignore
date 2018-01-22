@@ -1,0 +1,5 @@
+mock/**/*.js
+node_modules/**/*.js
+gulp-tasks/
+gulpfile.js
+dist/
