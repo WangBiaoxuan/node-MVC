@@ -1,8 +1,13 @@
 {
-  "presets": ["stage-3"],
+  "presets": [
+    "es2015", 
+    "stage-3"
+  ],
   "plugins": [
+    "transform-runtime",
     "transform-async-to-generator",
     "transform-es2015-modules-commonjs",
-    "transform-export-extensions"
+    "transform-export-extensions",
+    ["import", { libraryName: "antd-mobile", style: "css" }] // `style: true` 会加载 less 文件
   ]
 }
